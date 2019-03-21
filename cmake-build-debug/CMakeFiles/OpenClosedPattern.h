@@ -2,18 +2,22 @@
 #ifndef UNTITLED_OPENCLOSEDPATTERN_H
 #define UNTITLED_OPENCLOSEDPATTERN_H
 #include <bits/stdc++.h>
+
 class Flyable {
 public:
     virtual void fly()  = 0;
 };
+
 class Quackable {
 public:
     virtual void quack() = 0;
 };
+
 class FlyWithWings: public Flyable {
 public:
     void fly();
 };
+
 class CantFly: public Flyable{
 public:
     void fly();
@@ -23,6 +27,7 @@ class CanQuack: public Quackable{
 public:
     void quack();
 };
+
 class CantQuack: public Quackable {
 public:
     void quack();
