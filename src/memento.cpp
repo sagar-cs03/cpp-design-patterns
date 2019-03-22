@@ -12,6 +12,8 @@ class Editor {
     
     class Snapshot {
         private:
+        //Note that in java implementation, you wouldn't require the reference to the enclosing class, as 
+        //the outer class can directly access the inner class private methods. This is not allowed in C++, hence the below field
         Editor* editor;
         string txt;
         int cordX, cordY;
@@ -61,8 +63,7 @@ class Editor {
 
 class CareTaker {
     private:
-    //Note that in java implementation, you wouldn't require the reference to the enclosing class, as 
-    //the outer class can directly access the inner class private methods. This is not allowed in C++, hence the below field
+    
     Editor* editor;
     public:
     Editor::Snapshot* lastCommand;
